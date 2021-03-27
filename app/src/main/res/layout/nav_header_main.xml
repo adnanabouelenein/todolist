@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="176dp"
+    android:background="@drawable/heade_background"
+    android:padding="@dimen/space_16">
+
+    <ImageView
+        android:id="@+id/profile_pic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/space_32"
+        android:background="@drawable/header_circle_profile_pic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_16"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/profile_pic"
+        app:layout_constraintTop_toTopOf="@id/profile_pic"
+        android:text="Lotta Schneider" />
+
+    <TextView
+        android:id="@+id/job_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/profile_pic"
+        app:layout_constraintStart_toStartOf="@id/profile_name"
+        android:text="Android Developer" />
+
+    <ProgressBar
+        android:id="@+id/progress_horizontal_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_pic" />
+
+    <ProgressBar
+        android:id="@+id/progress_horizontal_bar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_pic" />
+
+    <ProgressBar
+        android:id="@+id/progress_horizontal_bar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_pic" />
+
+    <TextView
+        android:id="@+id/experience_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginTop="@dimen/space_16"
+        android:text="@string/beginner"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/progress_horizontal_bar"
+        app:layout_constraintTop_toBottomOf="@id/progress_horizontal_bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0_points"
+        app:layout_constraintBottom_toBottomOf="@id/experience_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/experience_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

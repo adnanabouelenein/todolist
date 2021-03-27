@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <item
+            android:id="@+id/sport_category_item"
+            android:title="@string/sports"
+            android:orderInCategory="300"/>
+
+        <item
+            android:id="@+id/work_category_item"
+            android:title="@string/work"
+            android:orderInCategory="200"/>
+
+        <item
+            android:id="@+id/shopping_category_item"
+            android:title="@string/shopping"
+            android:orderInCategory="100"/>
+
+        <item
+            android:id="@+id/hobbies_category_item"
+            android:title="@string/hobbies"
+            android:orderInCategory="400"/>
+
+        <item
+            android:id="@+id/daily_tasks"
+            android:title="@string/daily_tasks"
+            android:orderInCategory="500"/>
+
+</menu>

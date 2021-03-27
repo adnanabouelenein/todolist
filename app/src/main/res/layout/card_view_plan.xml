@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:layout_marginStart="@dimen/space_16"
+    android:layout_marginEnd="@dimen/space_16"
+    android:layout_marginTop="@dimen/space_8"
+    android:layout_marginBottom="@dimen/space_8"
+    app:cardCornerRadius="@dimen/space_16">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/notification_btn"
+            android:layout_width="17dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="@dimen/space_32"
+            android:layout_marginEnd="@dimen/space_24"
+            android:background="@drawable/notification_button_selected"
+            android:src="@drawable/bell"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/edit_task_btn"
+            android:layout_width="17dp"
+            android:layout_height="20dp"
+            android:background="@color/transparent"
+            android:src="@drawable/edit_plan"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/notification_btn"
+            app:layout_constraintStart_toStartOf="@id/notification_btn"
+            app:layout_constraintTop_toBottomOf="@id/notification_btn" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/space_24"
+            app:cardCornerRadius="@dimen/space_16"
+            app:cardElevation="@dimen/space_32"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/notification_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/task_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_16"
+                    android:layout_marginTop="@dimen/space_16"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Join Meeting" />
+
+                <TextView
+                    android:id="@+id/task_brief"
+                    android:layout_width="296dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:layout_marginTop="@dimen/space_8"
+                    app:layout_constraintStart_toStartOf="@id/task_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/task_title"
+                    tools:text="Occur in which toil and pain can procure hi some great pleasure. To take a trivial wh." />
+
+                <TextView
+                    android:id="@+id/task_time_daily_tasks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_16"
+                    android:layout_marginEnd="@dimen/space_16"
+                    app:layout_constraintEnd_toEndOf="@id/task_brief"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:text="10:00 am" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_marginStart="@dimen/space_8"
+    android:layout_marginEnd="@dimen/space_8"
+    android:layout_marginTop="@dimen/space_8"
+    android:layout_marginBottom="@dimen/space_8"
+    app:cardCornerRadius="@dimen/space_16">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/checkbox"
+            android:layout_width="@dimen/space_40"
+            android:layout_height="@dimen/space_40"
+            android:layout_marginStart= "@dimen/space_16"
+            android:layout_marginEnd="@dimen/space_16"
+            android:background="@drawable/circle_shape"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/task_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_16"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintStart_toEndOf="@id/checkbox"
+            app:layout_constraintTop_toTopOf="@id/checkbox"
+            android:textColor="@color/black"
+            tools:text="Task Name" />
+
+        <TextView
+            android:id="@+id/task_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_12"
+            tools:text="September, 14-Monday"
+            app:layout_constraintStart_toStartOf="@id/task_name"
+            app:layout_constraintBottom_toBottomOf="@id/checkbox"/>
+
+        <TextView
+            android:id="@+id/task_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_12"
+            tools:text="9:00 am"
+            android:layout_marginEnd="@dimen/space_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/task_name"
+            app:layout_constraintBottom_toBottomOf="@id/task_day"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

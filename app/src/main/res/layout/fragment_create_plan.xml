@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".frgaments.CreatePlanFragment">
+
+
+    <TextView
+        android:id="@+id/create_plan_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginTop="@dimen/space_32"
+        android:text="@string/create_a_plan"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/plan_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginTop="@dimen/space_8"
+        android:layout_marginEnd="@dimen/space_16"
+        android:background="@drawable/edit_text_curves"
+        android:hint="@string/plan_title"
+        android:paddingStart="@dimen/space_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/create_plan_text"
+        app:layout_constraintTop_toBottomOf="@id/create_plan_text" />
+
+    <EditText
+        android:id="@+id/plan_details_create_plan_activity"
+        android:layout_width="match_parent"
+        android:layout_height="152dp"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginTop="@dimen/space_8"
+        android:layout_marginEnd="@dimen/space_16"
+        android:background="@drawable/edit_text_curves"
+        android:gravity="top"
+        android:hint="@string/write_your_plan_here"
+        android:paddingStart="@dimen/space_16"
+        android:paddingTop="@dimen/space_8"
+        app:layout_constraintEnd_toEndOf="@id/plan_title"
+        app:layout_constraintStart_toStartOf="@id/plan_title"
+        app:layout_constraintTop_toBottomOf="@id/plan_title" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/time_btn"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginTop="@dimen/space_16"
+        android:background="@drawable/btn_curves_white"
+        android:drawableStart="@drawable/time"
+        android:elevation="@dimen/space_16"
+        android:paddingStart="@dimen/space_16"
+        android:text="@string/_10_30_am"
+        android:textAllCaps="false"
+        android:textColor="@color/gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/plan_details_create_plan_activity" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/date_btn"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:background="@drawable/btn_curves_white"
+        android:drawableStart="@drawable/calendar_icon"
+        android:elevation="@dimen/space_16"
+        android:paddingStart="@dimen/space_16"
+        android:text="@string/sep_19_2020"
+        android:textAllCaps="false"
+        android:textColor="@color/gray"
+        app:layout_constraintStart_toStartOf="@id/time_btn"
+        app:layout_constraintEnd_toEndOf="@id/time_btn"
+        app:layout_constraintTop_toBottomOf="@id/time_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/category_btn"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:background="@drawable/btn_curves_white"
+        android:drawableStart="@drawable/category_icon"
+        android:elevation="@dimen/space_16"
+        android:paddingStart="@dimen/space_16"
+        android:text="@string/category"
+        android:textAllCaps="false"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="@id/delete_text_btn"
+        app:layout_constraintStart_toStartOf="@id/delete_text_btn"
+        app:layout_constraintTop_toBottomOf="@id/delete_text_btn" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/delete_text_btn"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_16"
+        android:background="@drawable/btn_curves_white"
+        android:drawableStart="@drawable/trash"
+        android:elevation="@dimen/space_16"
+        android:paddingStart="@dimen/space_16"
+        android:text="@string/delete_text"
+        android:textAllCaps="false"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@id/time_btn"
+        app:layout_constraintEnd_toEndOf="@id/plan_details_create_plan_activity"
+        app:layout_constraintTop_toTopOf="@id/time_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/complete_plan_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16"
+        android:background="@drawable/btn_curves"
+        android:text="@string/complete_plan"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/time_btn"
+        app:layout_constraintEnd_toEndOf="@id/delete_text_btn"
+        app:layout_constraintTop_toBottomOf="@id/date_btn"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/dutiesFragment">
+    <fragment
+        android:id="@+id/dutiesFragment"
+        android:name="com.adnanabouelenein.todolist.frgaments.DutiesFragment"
+        android:label="fragment_duties"
+        tools:layout="@layout/fragment_duties" >
+        <action
+            android:id="@+id/action_dutiesFragment_to_dailyPlanFragment"
+            app:destination="@id/dailyPlanFragment" />
+        <action
+            android:id="@+id/action_dutiesFragment_to_weeklyPlanFragment"
+            app:destination="@id/weeklyPlanFragment" />
+        <action
+            android:id="@+id/action_dutiesFragment_to_createPlanFragment"
+            app:destination="@id/createPlanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weeklyPlanFragment"
+        android:name="com.adnanabouelenein.todolist.frgaments.WeeklyPlanFragment"
+        android:label="fragment_weekly_plan"
+        tools:layout="@layout/fragment_weekly_plan" />
+    <fragment
+        android:id="@+id/dailyPlanFragment"
+        android:name="com.adnanabouelenein.todolist.frgaments.DailyPlanFragment"
+        android:label="fragment_daily_plan"
+        tools:layout="@layout/fragment_daily_plan" >
+        <action
+            android:id="@+id/action_dailyPlanFragment_to_createPlanFragment"
+            app:destination="@id/createPlanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPlanFragment"
+        android:name="com.adnanabouelenein.todolist.frgaments.CreatePlanFragment"
+        android:label="fragment_create_plan"
+        tools:layout="@layout/fragment_create_plan" >
+        <action
+            android:id="@+id/action_createPlanFragment_to_dailyPlanFragment"
+            app:destination="@id/dailyPlanFragment" />
+    </fragment>
+</navigation>
